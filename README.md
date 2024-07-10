@@ -1,3 +1,5 @@
+# commit convention
+
 | 커밋 유형 | 의미 |
 | --- | --- |
 | Feat | 새로운 기능 추가 |
