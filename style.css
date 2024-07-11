@@ -1,0 +1,10 @@
+@import "./reset.css";
+
+* {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+html, body {
+	height: 100%;
+	background-color: #F1F9FF;
+}

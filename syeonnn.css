@@ -1,0 +1,79 @@
+@import "./reset.css";
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 4.75rem;
+    background-color: white;
+}
+
+.title {
+    font-size: 1.78rem;
+}
+
+.btns {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-btn {
+    border: 0;
+    background-color: transparent;
+    margin-left: 0.625rem; 
+}
+
+#dice-btn {
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+#cart-btn {
+    width: 2.625rem;
+    height: 2.625rem;
+}
+
+/* 말풍선 적절한 top 과 margin-left 로 위치조정 */
+.arrow_box {
+    display: none;
+    position: absolute;
+    padding: 0.625rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    background: #F0F1F5;
+    color: #000;
+    font-size: 0.875rem;
+}
+
+.arrow_box.guide-dice {
+    width: 12.625rem;
+    top: 5.2rem;
+    right: 3.75rem;
+}
+.arrow_box.guide-cart {
+    width: 10.875rem;
+    top: 5.2rem;
+    right: 0.525rem;
+}
+
+.arrow_box:after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -0.625rem;
+    border: solid transparent;
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #F0F1F5;
+    border-width: 0.625rem;
+    pointer-events: none;
+    content: ' ';
+  }
+  
+button:hover + p.arrow_box {
+    display: block;
+}
