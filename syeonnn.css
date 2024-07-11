@@ -87,3 +87,17 @@ button:hover + p.arrow_box {
     padding-top: 2.25rem;
     padding-bottom: 1.25rem;
 }
+
+/* .modal{
+    position:absolute;
+    display:none;
+    
+    justify-content: center;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background-color: rgba(0,0,0,0.4);
+} */
