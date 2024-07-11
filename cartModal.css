@@ -1,0 +1,50 @@
+@import "./reset.css";
+
+* {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+html, body {
+	/* height: ; */
+	background-color: white;
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cartModal-header{
+    padding: 1rem;
+}
+.favorite-title{
+    font-size: 24px;
+    font-weight: bold;
+}
+.favorite-cnt{
+    margin-left: auto;
+}
+
+.cart-item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.cart-item-img{
+    width: 100px;
+    height: 100px;
+}
+.cart-item-name{
+    font-size: 18px;
+    align-self: flex-start;
+    padding-left: 10px;
+}
+.cart-delete-btn{
+    border: 0;
+    background-color: transparent;
+    margin-left: auto; 
+    align-self: flex-start;
+}
