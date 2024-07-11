@@ -79,9 +79,9 @@ body {
   position: absolute;
   top: 0.625rem;
   right: 0.625rem;
-  background-color: white;
+
   border: none;
-  border-radius: 50%;
+
   width: 1.875rem;
   height: 1.875rem;
   display: flex;
@@ -90,7 +90,7 @@ body {
   font-size: 1.25rem;
   color: #007bff;
   cursor: pointer;
-  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+
   background: url('./assets/icons/favorite_default.svg') no-repeat center center;
     background-size: contain;
 }
