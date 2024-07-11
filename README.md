@@ -1,7 +1,10 @@
 ![image](https://github.com/woorifisa-service-dev-3rd/frontend-1st-ppl/assets/52206904/59471e07-e4e9-4952-b9b2-9ef6f7a40d92)
 
-# 서비스 소개 (추후 gif 첨부)
+# 서비스 소개
 저희 박박이 팀은 항상 점심시간에 무엇을 먹을지 고민하는 불편함을 해소하고자 상암 IT타워에 있는 음식점, 카페 등을 추천해주는 웹사이트를 개발하였습니다.
+
+![ppl](https://github.com/woorifisa-service-dev-3rd/frontend-1st-ppl/assets/52206904/de03feae-a387-465f-b946-e1e4d3eb2e45)
+
 
 # 이용 방법
 > 저희 웹사이트는 다음과 같은 기능을 포함하고 있습니다.
@@ -11,8 +14,11 @@
 4. 찜 목록을 기반으로 랜덤으로 하나 골라서 추천해주기 (JS 추가 시 구현)
 
 # UI 스타일 가이드라인
-
 <img width="454" alt="image" src="https://github.com/woorifisa-service-dev-3rd/frontend-1st-ppl/assets/52206904/e1717af0-6c2f-4967-8591-e6e177fc8f62">
+
+# Lighthouse 접근성 개선 과정
+- 기존에는 접근성이 62점으로 낮은 점수였습니다.
+<img width="411" alt="image" src="https://github.com/woorifisa-service-dev-3rd/frontend-1st-ppl/assets/52206904/983450b2-301c-4b8c-882f-fed8239efb10">
 
 
 # commit convention
