@@ -24,6 +24,16 @@
     border: 0;
     background-color: transparent;
     margin-left: 0.625rem; 
+    transition: transform 0.8s linear;
+}
+
+.header-btn:hover{
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 #dice-btn {
