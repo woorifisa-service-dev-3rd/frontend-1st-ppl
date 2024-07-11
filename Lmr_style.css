@@ -36,7 +36,7 @@ body {
   background-color: #D9D9D9; /* 배경 색상 설정 */
 
   justify-content: center; /* 수평 가운데 정렬 */
-  width: 300px; /* 이미지 너비 설정 */
+  width: 18.75rem; /* 이미지 너비 설정 */
   height: 17.3125rem; /* 이미지 높이 설정 */
   flex-shrink: 0; /* 플렉스 아이템이 축소되지 않도록 설정 */
 
