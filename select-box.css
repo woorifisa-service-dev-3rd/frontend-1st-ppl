@@ -1,8 +1,8 @@
 select {
     width: 8.4375rem;
     height: 1.8125rem;
-    padding: 0 28px 0 10px;
-    font-size: 15px;
+    padding: 0 1.75rem 0 0.625rem;
+    font-size: 0.9375rem;
 
     border: none;
     border-radius: 0.3rem;
