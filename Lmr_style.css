@@ -16,7 +16,7 @@ body {
   flex-direction: column; /* 플렉스 방향을 세로로 설정 */
   align-items: center; /* 내부 요소들을 수평 가운데 정렬 */
 
-  width: 24.875rem; /* 카드 너비 설정 */
+  width: 398px; /* 카드 너비 설정 */
   height: 28.75rem; /* 카드 높이 설정 */
   flex-shrink: 0; /* 플렉스 아이템이 축소되지 않도록 설정 */
 
@@ -30,12 +30,13 @@ body {
   width: calc((100% - 3 * 2.12rem) / 4); /* 동적 너비 설정 */
   padding-left: 12px;
   padding-right: 12px;
+  overflow: hidden; /* 이미지가 카드 아이템을 벗어나지 않도록 설정 */
 }
 .card_Item_Img {
   background-color: #D9D9D9; /* 배경 색상 설정 */
 
   justify-content: center; /* 수평 가운데 정렬 */
-  width: 20.3125rem; /* 이미지 너비 설정 */
+  width: 18.75rem; /* 이미지 너비 설정 */
   height: 17.3125rem; /* 이미지 높이 설정 */
   flex-shrink: 0; /* 플렉스 아이템이 축소되지 않도록 설정 */
 

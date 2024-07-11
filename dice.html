@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dice.css">
+</head>
+
+<body>
+    <div class="dice-container">
+        <p id="dice-text">굴려 굴려 주사위 ~ 원하는 메뉴를 선택 후 주사위를 눌러보세요! 😜</p>
+        <label class="custom-radio">
+            <input type="radio" name="dice-radio" class="radio">
+            <span class="checkmark"></span>
+            전체 메뉴 중에서 랜덤 뽑기
+        </label>
+        <label class="custom-radio">
+            <input type="radio" name="dice-radio" class="radio">
+            <span class="checkmark"></span>
+            내 찜 목록 중에서 랜덤 뽑기
+        </label>
+    </div>
+
+    <div class="dice" id="dice"></div>
+
+    <!-- 카드 이곳에 소환하면 될듯? -->
+
+    
+</body>
+<script>
+    document.getElementById('dice').addEventListener('click', function() {
+        this.classList.add('rotate');
+        // 2초 후에 rotate 클래스를 제거하여 다음 클릭 때 다시 회전하도록 함
+        setTimeout(() => {
+            this.classList.remove('rotate');
+        }, 2000);
+    });
+</script>
+</html>
