@@ -20,6 +20,10 @@
 - 기존에는 접근성이 62점으로 낮은 점수였습니다.
 <img width="411" alt="image" src="https://github.com/woorifisa-service-dev-3rd/frontend-1st-ppl/assets/52206904/983450b2-301c-4b8c-882f-fed8239efb10">
 
+- img의 alt와 button의 title a태그의 aria-label 등을 추가하여 웹 접근성을 높였습니다.
+- meta태그를 추가하여 seo를 최적화 하였습니다.
+<img width="423" alt="image" src="https://github.com/woorifisa-service-dev-3rd/frontend-1st-ppl/assets/52206904/f8a7c3fa-044f-4b96-a63e-650b599461c2">
+
 
 # commit convention
 
