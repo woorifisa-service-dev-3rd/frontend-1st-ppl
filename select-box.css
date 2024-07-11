@@ -3,17 +3,22 @@ select {
     height: 1.8125rem;
     padding: 0 28px 0 10px;
     font-size: 15px;
-    border: 0;
+
+    border: none;
+    border-radius: 0.3rem;
+
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     box-sizing: border-box;
-    background: transparent; 
+    background: white; 
+
+    background: #fff url('./assets/icons/select.png') no-repeat 97% 50%/1rem auto;
 }
 
 .select-wrap {
     width: 8.4375rem;
     height: 1.8125rem;
-    border: 1px solid #ccc;
     border-radius: 0.5rem;
     background: url('./assets/icons/select.png') no-repeat 97% 50%/1rem auto;
 }
