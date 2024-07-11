@@ -5,7 +5,7 @@ body {
 .card_Container {  
   display: flex;
   flex-direction:row;
-  justify-content:center;
+  justify-content:start;
   align-items:center;
   gap: 2.12rem; /* 카드 사이의 간격 설정 */
   margin-bottom: 2.12rem; /* 요소끼리의 상하 간격 설정 */
@@ -25,7 +25,7 @@ body {
   border: 0.0625rem solid var(--Border, #DDE1EB);
   background: var(--White, #FFF);
 
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
   padding-bottom: 1.25rem; /* 텍스트 영역을 위해 패딩 추가 */
   width: calc((100% - 3 * 2.12rem) / 4);
@@ -98,4 +98,34 @@ body {
 .favorite-btn:hover {
     background: url('./assets/icons/favorite_hover.svg') no-repeat center center;
     background-size: contain;
+}
+
+@import url('./syeonnn.css');
+.lmr-container .card_Item a:hover .arrow_box {
+  display: block; /* 이미지 위에 호버 시 보이게 함 */
+}
+
+.lmr-container .arrow_box.guide-link {
+  border: 1px solid #000; /* 말풍선 테두리를 검은색으로 설정 */
+  animation: float 3s infinite; /* 애니메이션 적용 */
+  background: #FFF0F5; /* 배경색 변경 */
+  top: 3rem; /* 말풍선 위치 조정 */
+  right: 1rem; /* 말풍선 위치 조정 */
+}
+
+.lmr-container .arrow_box.guide-link:after {
+  display: none; /* 세모 모양 제거 */
+}
+
+/* float 애니메이션 정의 */
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
 }
