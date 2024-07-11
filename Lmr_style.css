@@ -28,8 +28,8 @@ body {
   position: relative; /* 상대 위치 설정 */
   padding-bottom: 1.25rem; /* 텍스트 영역을 위해 패딩 추가 */
   width: calc((100% - 3 * 2.12rem) / 4); /* 동적 너비 설정 */
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   overflow: hidden; /* 이미지가 카드 아이템을 벗어나지 않도록 설정 */
 }
 .card_Item_Img {
