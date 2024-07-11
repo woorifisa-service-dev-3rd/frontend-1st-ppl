@@ -5,25 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PPL_LAUNCH_SUGGESTION</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <!-- Noto Sans KR 폰트 링크태그 -->
+    <link rel="stylesheet" href="select-box.css">
+    <link rel="stylesheet" href="syeonnn.css">
+    <link rel="stylesheet" href="Lmr_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    
 </head>
 
 <body>
-    <header>
-        <div>
-            <h1>헤더</h1>
+    <header class="header">
+        <h1 class="title">박박이의 점메추</h1>
+        <div class="btns">
+            <button type="button" class="header-btn">
+                <img id="dice-btn" src="./assets/icons/dice.svg" alt="dice_for_random_game">
+            </button>
+            <p class="arrow_box guide-dice">랜덤으로 점심 메뉴를 골라봐요!</p>
+            <button type="button" class="header-btn">
+                <img id="cart-btn" src="./assets/icons/cart.svg" alt="cart_for_wish_list">
+            </button>
+            <p class="arrow_box guide-cart">가고 싶은 식당을 찜해봐요!</p>
         </div>
     </header>
+    <div class="select-wrap">
+        <select name="category">
+            <option selected>전체보기</option>
+            <option value="1">카페</option>
+            <option value="2">한식</option>
+            <option value="3">치킨, 닭강정</option>
+            <option value="4">분식</option>
+            <option value="5">기타</option>
+        </select>
+    </div>
     <section>
         <div>
-            <h1>섹터</h1>
             <div class="card_Container">
                 <div class="card_Item">
                     <a href="https://map.naver.com/p/search/음식점/place/1941111624?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp">
-                        <img class="card_Item_Img" src="images/가마로강정_상암점.jpeg">                   
+                        <img class="card_Item_Img" src="./assets/images/가마로강정_상암점.jpeg">
                     </a>
                     <div class="card_Item_Content">
                         <p>가게명</p>
@@ -31,15 +50,13 @@
                         <p>영업 시간</p>
                         <p>사진 클릭시 URL</p>
                         <button class="favorite-btn">
-                            <img src="/favorite_default.svg" alt="좋아요">
+                            <img src="./assets/icons/favorite_default.svg" alt="좋아요">
                         </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
 </body>
 
 </html>

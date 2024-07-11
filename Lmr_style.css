@@ -14,11 +14,7 @@ body {
 	font-family: 'Noto Sans KR', sans-serif;
 }
 
-.card_Container {
-  border-color: black;
-  border-style: groove;
-  background-color: red;
-  
+.card_Container {  
   display: flex;
   flex-direction:row;
   justify-content:center;
@@ -104,11 +100,11 @@ body {
   color: #007bff;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  background: url('/favorite_default.svg') no-repeat center center;
+  background: url('./assets/icons/favorite_default.svg') no-repeat center center;
     background-size: contain;
 }
 
 .favorite-btn:hover {
-    background: url('/favorite_hover.svg') no-repeat center center;
+    background: url('./assets/icons/favorite_hover.svg') no-repeat center center;
     background-size: contain;
 }
