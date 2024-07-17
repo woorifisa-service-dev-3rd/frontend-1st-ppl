@@ -1,0 +1,148 @@
+{
+    "category": {
+        "카페": [
+            {
+                "id": 1,
+                "name": "베브릿지 상암IT점",
+                "time": "20:00에 영업 종료",
+                "introduce": "건강한 샌드위치와 맛있는 음료를 제공하는 cafe",
+                "url": "https://map.naver.com/p/search/음식점/place/1699491809?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            },
+            {
+                "id": 2,
+                "name": "매머드익스프레스 상암IT타워점",
+                "time": "20:00에 영업 종료",
+                "introduce": "가성비 좋은 커피와 다양한 음료를 제공하는 cafe",
+                "url": "https://map.naver.com/p/search/음식점/place/1037597034?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            },
+            {
+                "id": 3,
+                "name": "퍼크업커피",
+                "time": "18:30에 영업 종료",
+                "introduce": "다양한 커피와 음료로 인기 있는 cafe",
+                "url": "https://map.naver.com/p/search/음식점/place/1176439190?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            },
+            {
+                "id": 4,
+                "name": "커피사피엔스 상암아이티타워점",
+                "time": "17:30에 영업 종료",
+                "introduce": "진한 커피 맛과 다양한 음료가 인기인 cafe",
+                "url": "https://map.naver.com/p/search/음식점/place/1180519841?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            },
+            {
+                "id": 5,
+                "name": "도프커피 상암IT점",
+                "time": "17:55에 라스트오더",
+                "introduce": "합리적인 가격에 맛있는 커피를 제공하는 cafe",
+                "url": "https://map.naver.com/p/search/음식점/place/1112807004?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            }
+        ],
+        "한식": [
+            {
+                "id": 6,
+                "name": "김치도가 상암점",
+                "time": "17:00에 영업 시작",
+                "introduce": "신선한 재료와 가성비가 뛰어난 김치찌개 맛집",
+                "url": "https://map.naver.com/p/search/음식점/place/1016677361?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            },
+            {
+                "id": 7,
+                "name": "이선생짜글이 상암점",
+                "time": "17:00에 영업 시작",
+                "introduce": "가성비 좋은 짜글이와 두루치기로 유명한 맛집",
+                "url": "https://map.naver.com/p/search/음식점/place/1059065452?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            },
+            {
+                "id": 8,
+                "name": "서원네밥상",
+                "time": "정보 없음",
+                "introduce": "맛있고 가성비 좋은 한식을 제공하는 식당",
+                "url": "https://map.naver.com/p/search/음식점/place/1253690644?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            },
+            {
+                "id": 9,
+                "name": "미식가배 상암점",
+                "time": "20:00에 영업 종료",
+                "introduce": "깔끔하고 맛있는 한식을 제공하는 곳",
+                "url": "https://map.naver.com/p/search/음식점/place/1963951230?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            }
+        ],
+        "치킨,닭강정": [
+            {
+                "id": 10,
+                "name": "지코바치킨 상암점",
+                "time": "24:00에 영업 종료",
+                "introduce": "다양한 양념과 소금구이 치킨으로 인기 있는 치킨집",
+                "url": "https://map.naver.com/p/search/음식점/place/1897335073?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            },
+            {
+                "id": 11,
+                "name": "가마로강정 상암점",
+                "time": "24:00에 영업 종료",
+                "introduce": "매콤하고 달콤한 닭강정이 일품인 맛집",
+                "url": "https://map.naver.com/p/search/음식점/place/1941111624?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            }
+        ],
+        "분식": [
+            {
+                "id": 12,
+                "name": "오토김밥 상암점",
+                "time": "20:00에 영업 종료",
+                "introduce": "다양한 콤비 세트와 신선한 재료가 특징인 김밥집",
+                "url": "https://map.naver.com/p/search/음식점/place/1906477069?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            },
+            {
+                "id": 13,
+                "name": "프렌즈김밥",
+                "time": "20:50에 라스트오더",
+                "introduce": "다양한 김밥 메뉴와 포장 서비스가 좋은 김밥집",
+                "url": "https://map.naver.com/p/search/음식점/place/1909896317?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            },
+            {
+                "id": 14,
+                "name": "최가네김밥",
+                "time": "21:00에 영업 종료",
+                "introduce": "다양한 김밥 메뉴와 빠른 서비스가 특징인 김밥집",
+                "url": "https://map.naver.com/p/search/음식점/place/1971499150?c=19.50,0,0,0,dh&placePath=?entry%3Dbmp"
+            }
+        ],
+        "기타": [
+            {
+                "id": 15,
+                "name": "명동 칼국수",
+                "time": "17:00에 영업 시작",
+                "introduce": "맛있고 가성비 좋은 칼국수와 해물요리를 제공하는 곳",
+                "url": "https://map.naver.com/p/search/음식점/place/1319487141?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            },
+            {
+                "id": 16,
+                "name": "청진생대구탕",
+                "time": "정보 없음",
+                "introduce": "신선한 재료로 만든 생대구탕과 아구찜이 인기인 식당",
+                "url": "https://map.naver.com/p/search/음식점/place/13437555?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            },
+            {
+                "id": 17,
+                "name": "소마카츠",
+                "time": "19:30에 라스트오더",
+                "introduce": "푸짐하고 맛있는 돈가스를 제공하는 곳",
+                "url": "https://map.naver.com/p/search/음식점/place/1836852677?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            },
+            {
+                "id": 18,
+                "name": "오카와리",
+                "time": "20:00에 영업 종료",
+                "introduce": "생활의 달인에 나온 서대문역 라멘 맛집",
+                "url": "https://map.naver.com/p/search/음식점/place/37018875?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            },
+            {
+                "id": 19,
+                "name": "WBAR",
+                "time": "19:00에 영업 시작",
+                "introduce": "다양한 위스키와 함께하는 바",
+                "url": "https://map.naver.com/p/search/음식점/place/36174961?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+            }
+        ]
+    }
+  }
+  
