@@ -65,8 +65,7 @@
 
     <!-- 랜덤 주사위 모달 팝업 -->
     <div class="modal" id="random-modal">
-        <div class="modal-container">
-            <!-- <div class="dice-container"> -->
+        <div class="modal-container dice-modal-container">
                 <div class="randomModal-header">
                     <h1 class="favorite-title">굴려 굴려 주사위 ~</h1>
                     <button class="delete-btn" id="random-close-btn">
@@ -75,15 +74,15 @@
                 </div>
                 <hr/>
                 <section style="padding: 1.25rem">
-                    <div class="wish-container">
+                    <div class="dice-container">
                         <p id="dice-text">원하는 메뉴를 선택 후 주사위를 눌러보세요! 😜</p>
                         <label class="custom-radio" for="entire-list">
-                            <input type="radio" name="dice-radio" class="radio" id="entire-list">
+                            <input type="radio" id="entire-list" name="dice-radio" class="radio" value="entire-list" >
                             <span class="checkmark"></span>
                             전체 메뉴 중에서 랜덤 뽑기
                         </label>
                         <label class="custom-radio" for="wish-list">
-                            <input type="radio" name="dice-radio" class="radio" id="wish-list">
+                            <input type="radio" id="wish-list" name="dice-radio" class="radio" value="wish-list" >
                             <span class="checkmark"></span>
                             내 찜 목록 중에서 랜덤 뽑기
                         </label>
@@ -91,7 +90,16 @@
         
                     <div class="dice" id="dice"></div>
                     <!-- 카드 소환 -->
-                    <div ></div>
+                    <div class="dice-result-container" id="dice-result">
+                        <div class="dice-result-box">
+                            <img class="dice-result-img" src="./assets/images/베브릿지_상암IT점.jpeg" alt="베브릿지_상암IT점 대표 이미지">
+                            <div class="dice-result-info">
+                                <h3 style="font-weight: bold; padding-bottom: 10px;">베브릿지 상암IT점</h3>
+                                <p style="padding-bottom: 10px;">가성비 좋은 커피와 다양한 음료를 제공하는 카페</p>
+                                <p>영업 시간 : 20:00에 영업 종료</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
         </div>
     </div>
@@ -122,7 +130,7 @@
                         </a>
                         <div class="card_Item_Content">
                             <div class="Item_Title">
-                                <p style="">베브릿지 상암IT점</p>
+                                <p>베브릿지 상암IT점</p>
                                 <button type="button" title="찜하기 버튼" class="favorite-btn"></button>
                             </div>
                             <br>
