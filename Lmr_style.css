@@ -52,7 +52,6 @@ body {
   flex-shrink: 0; /* 플렉스 아이템이 축소되지 않도록 설정 */
 
   color: #000; /* 텍스트 색상 설정 */
-  font-family: Inter; /* 폰트 설정 */
   font-size: 1rem; /* 폰트 크기 설정 */
   font-style: normal; /* 폰트 스타일 설정 */
   font-weight: 400; /* 폰트 두께 설정 */

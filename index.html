@@ -8,27 +8,95 @@
     <title>PPL_LAUNCH_SUGGESTION</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="select-box.css">
-    <link rel="stylesheet" href="syeonnn.css">
+
+    <!-- <link rel="stylesheet" href="syeonnn.css"> -->
     <link rel="stylesheet" href="Lmr_style.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
+    <script defer src="wishModal.js"></script>
+    <script defer src="randomModal.js"></script>
 </head>
-
 <body>
     <header class="header">
         <img src="./assets/icons/title.jpg" alt="title" style="width: 300px;">
         <div class="btns">
-            <button type="button" title="랜덤 뽑기 버튼" class="header-btn">
+            <button type="button" title="랜덤 뽑기 버튼" class="header-btn" id="random-open-btn">
                 <img id="dice-btn" src="./assets/icons/dice.svg" alt="dice_for_random_game">
             </button>
             <p class="arrow_box guide-dice">랜덤으로 점심 메뉴를 골라봐요!</p>
-            <button type="button" title="찜 목록 조회 버튼" class="header-btn">
+            <button type="button" title="찜 목록 조회 버튼" class="header-btn" id="wish-open-btn">
                 <img id="cart-btn" src="./assets/icons/cart.svg" alt="cart_for_wish_list">
             </button>
             <p class="arrow_box guide-cart">가고 싶은 식당을 찜해봐요!</p>
         </div>
     </header>
+
+    <!-- 찜 목록 모달 팝업 -->
+    <div class="modal" id="wish-modal">
+        <div class="modal-container">
+            <div class="wishModal-header">
+                <h1 class="favorite-title">찜 목록</h1>
+                <h2 class="favorite-cnt">총 1개</h2>
+            </div>
+            <hr/>
+            <section style="padding: 1.25rem">
+                <div class="wish-container">
+                    <div class="wish-item">
+                        <img class="wish-item-img" src="./assets/images/가마로강정_상암점.jpeg">
+                        <div class="wish-item-name">가마로강정 상암점</div>
+                        <button class="delete-btn">
+                            <img src="./assets/icons/delete.svg" alt="삭제">
+                        </button>
+                    </div>
+                    <div class="wish-item">
+                        <img class="wish-item-img" src="./assets/images/김치도가_상암점.jpeg">
+                        <div class="wish-item-name">김치도가 상암점</div>
+                        <button class="delete-btn">
+                            <img src="./assets/icons/delete.svg" alt="삭제">
+                        </button>
+                    </div>
+                    
+                </div>
+                <button class="wish-close-btn" id="wish-close-btn">닫기</button>
+            </section>
+        </div>
+    </div>
+
+    <!-- 랜덤 주사위 모달 팝업 -->
+    <div class="modal" id="random-modal">
+        <div class="modal-container">
+            <!-- <div class="dice-container"> -->
+                <div class="randomModal-header">
+                    <h1 class="favorite-title">굴려 굴려 주사위 ~</h1>
+                    <button class="delete-btn" id="random-close-btn">
+                        <img src="./assets/icons/delete.svg" alt="닫기">
+                    </button>
+                </div>
+                <hr/>
+                <section style="padding: 1.25rem">
+                    <div class="wish-container">
+                        <p id="dice-text">원하는 메뉴를 선택 후 주사위를 눌러보세요! 😜</p>
+                        <label class="custom-radio" for="entire-list">
+                            <input type="radio" name="dice-radio" class="radio" id="entire-list">
+                            <span class="checkmark"></span>
+                            전체 메뉴 중에서 랜덤 뽑기
+                        </label>
+                        <label class="custom-radio" for="wish-list">
+                            <input type="radio" name="dice-radio" class="radio" id="wish-list">
+                            <span class="checkmark"></span>
+                            내 찜 목록 중에서 랜덤 뽑기
+                        </label>
+                    </div>
+        
+                    <div class="dice" id="dice"></div>
+                    <!-- 카드 소환 -->
+                    <div ></div>
+                </section>
+        </div>
+    </div>
+
+    <!-- 홈 화면 -->
     <section style="padding: 2.8rem 6.25rem">
         <div class="service-info">상암 IT 타워에 입점해 있는 모든 식당과 카페를 보여드릴게요~!</div>
         <div class="select-wrap">
@@ -406,6 +474,7 @@
         </div>
         </div>
     </section>
+    
 </body>
 
 </html>
