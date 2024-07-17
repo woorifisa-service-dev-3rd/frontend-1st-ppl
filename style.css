@@ -8,3 +8,349 @@ html, body {
 	height: 100%;
 	background-color: #F1F9FF;
 }
+
+@import "./reset.css";
+
+/* header */
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 4.75rem;
+    background-color: white;
+}
+
+.title {
+    font-size: 1.78rem;
+}
+
+.btns {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-btn {
+    border: 0;
+    background-color: transparent;
+    margin-left: 0.625rem; 
+    transition: transform 0.8s linear;
+}
+
+.header-btn:hover{
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+#dice-btn {
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+#cart-btn {
+    width: 2.625rem;
+    height: 2.625rem;
+}
+
+.arrow_box {
+    display: none;
+    position: absolute;
+    padding: 0.625rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    background: #F0F1F5;
+    color: #000;
+    font-size: 0.875rem;
+}
+
+.arrow_box.guide-dice {
+    width: 12.625rem;
+    top: 5.2rem;
+    right: 3.75rem;
+}
+.arrow_box.guide-cart {
+    width: 10.875rem;
+    top: 5.2rem;
+    right: 0.525rem;
+}
+
+.arrow_box:after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -0.625rem;
+    border: solid transparent;
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #F0F1F5;
+    border-width: 0.625rem;
+    pointer-events: none;
+    content: ' ';
+  }
+  
+button:hover + p.arrow_box {
+    
+    display: block;
+}
+
+/* section */
+.service-info {
+    padding: 1rem 0;
+}
+.card-title {
+    font-size: 1.75rem;
+    padding-top: 2.25rem;
+    padding-bottom: 1.25rem;
+}
+
+/* .modal{
+    position:absolute;
+    display:none;
+    
+    justify-content: center;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background-color: rgba(0,0,0,0.4);
+} */
+
+.modal {
+    display: none; /*평소에는 보이지 않도록*/
+    position: fixed;
+
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: rgba(0,0,0,0.5);
+    z-index: 98;
+}
+
+.modal .modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    z-index: 99;
+    max-height: 600px;
+}
+
+/* wish-modal*/
+hr {
+    background:#DDE1EB;
+    height:1px;
+    border:0;
+}
+.wishModal-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+}
+.favorite-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.favorite-cnt{
+    margin-left: auto;
+    color: #A0A8B5;
+    font-weight: bold;
+}
+.wish-container{
+    max-height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.wish-item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1.125rem;
+    height: auto;
+}
+.wish-item-img{
+    width: 6.25rem;
+    height: 6.25rem;
+}
+.wish-item-name{
+    font-size: 1.125rem;
+    align-self: flex-start;
+    padding-left: 0.625rem;
+}
+.delete-btn{
+    border: 0;
+    background-color: transparent;
+    margin-left: auto; 
+    align-self: flex-start;
+}
+.wish-close-btn{
+    background-color: #0C8CE9;
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.25rem;
+    border: solid 0.0625rem #0C8CE9;
+    font-size: 1.25rem;
+    color: white;
+    margin-top: 0.5rem;
+}
+
+/* dice-modal */
+#dice-text {
+    margin-bottom: 2rem;
+}
+
+/* dice 컨테이너 */
+.dice-modal-container {
+	width: 37.5rem;
+	height: 35.2rem;
+}
+.dice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.randomModal-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+}
+
+.randomModal-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.randomModal-close-btn{
+    margin-left: auto;
+}
+
+/* 숨긴 기본 라디오 버튼 */
+.custom-radio input[type="radio"] {
+    display: none;
+}
+
+/* 라디오 버튼을 위한 커스텀 스타일 */
+.custom-radio {
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1rem;
+    user-select: none;
+}
+
+/* 커스텀 라디오 박스 */
+.custom-radio .checkmark {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 0.125rem solid #0C8CE9;
+    margin-right: 0.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+/* 선택되었을 때 스타일 */
+.custom-radio input[type="radio"]:checked + .checkmark {
+    background-color: #0C8CE9; /* 선택되었을 때 색상 */
+    border-color: #0C8CE9;
+}
+
+/* 체크 표시 */
+.custom-radio .checkmark:after {
+    content: "";
+    display: none;
+    width: 0.375rem;
+    height: 0.75rem;
+    border: solid white;
+    border-width: 0 0.1875rem 0.1875rem 0;
+    transform: rotate(45deg);
+}
+
+/* 선택되었을 때 체크 표시 보이기 */
+.custom-radio input[type="radio"]:checked + .checkmark:after {
+    display: block;
+}
+
+.dice {
+    width: 12.5rem;
+    height: 12.5rem;
+    background-image: url('./assets/icons/roll-dice.svg'); /* 주사위 이미지 경로 */
+    background-size: cover;
+    margin: 3.125rem auto;
+    transition: transform 2s;
+}
+
+.rotate {
+    transform: rotate(360deg);
+}
+
+.dice-result-container {
+	display: none;
+	padding-top: 3.125rem;
+}
+.dice-result-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.dice-result-img {
+	width: 50%;
+}
+.dice-result-info {
+	width: 50%;
+	padding-left: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
+
+select {
+    width: 8.4375rem;
+    height: 1.8125rem;
+    padding: 0 1.75rem 0 0.625rem;
+    font-size: 0.9375rem;
+
+    border: none;
+    border-radius: 0.3rem;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    background: white; 
+
+    background: #fff url('./assets/icons/select.png') no-repeat 97% 50%/1rem auto;
+}
+
+.select-wrap {
+    width: 8.4375rem;
+    height: 1.8125rem;
+    border-radius: 0.5rem;
+    background: url('./assets/icons/select.png') no-repeat 97% 50%/1rem auto;
+}
+
