@@ -1,3 +1,5 @@
+@import url('./style.css'); /* 외부 CSS 파일 가져오기 */
+
 body {
 	font-family: 'Noto Sans KR', sans-serif; /* 폰트를 Noto Sans KR로 설정 */
 }
@@ -175,8 +177,6 @@ body {
   background-size: contain; /* 배경 이미지 크기 조정 */
   animation: clickAnimation 0.4s; /* 클릭 애니메이션 적용 */
 }
-
-@import url('./syeonnn.css'); /* 외부 CSS 파일 가져오기 */
 
 .lmr-container .card_Item a:hover .arrow_box {
   display: block; /* 이미지 위에 호버 시 보이게 함 */
