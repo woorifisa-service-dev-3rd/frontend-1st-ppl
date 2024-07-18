@@ -1,10 +1,14 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const chips = document.querySelectorAll('.chip');
-  const checkAllChip = document.querySelector('#check-All');
-  const cardContainer = document.getElementById('card_Container');
+import * as favorite from "./favorite.js";
+
+document.addEventListener("DOMContentLoaded", function () {
+  const chips = document.querySelectorAll(".chip");
+  const checkAllChip = document.querySelector("#check-All");
+  const cardContainer = document.getElementById("card_Container");
 
   if (!cardContainer) {
-    console.error('카드 컨테이너를 찾을 수 없습니다. id="card_Container"를 확인해주세요.');
+    console.error(
+      '카드 컨테이너를 찾을 수 없습니다. id="card_Container"를 확인해주세요.'
+    );
     return;
   }
   chips.forEach(function (chip) {
@@ -53,48 +57,96 @@ document.addEventListener('DOMContentLoaded', function () {
   
   // 카테고리 데이터 가져오기 함수
   function fetchCategoryData(category) {
-    fetch('/ETC/category.json')
-      .then(response => {
+    fetch("/ETC/category.json")
+      .then((response) => {
         if (!response.ok) {
-          throw new Error('Network response was not ok ' + response.statusText);
+          throw new Error("Network response was not ok " + response.statusText);
         }
         return response.json();
       })
-      .then(data => {
+      .then((data) => {
         // const container = document.getElementById('card_Container');
         const cate = category;
-        cardContainer.innerHTML = ''; // 기존 카드 제거
-        if (cate === '전체') {
+        cardContainer.innerHTML = ""; // 기존 카드 제거
+        if (cate === "전체") {
           Object.entries(data.category).forEach(([categoryName, items]) => {
-            items.forEach(item => {
-              renderCard(item);
+            // console.log(categoryName);
+            items.forEach((item) => {
+              const cookies_row = favorite.getCookie("favorite");
+              const cookies = cookies_row
+                .split(",")
+                .map((item) => parseInt(item.trim(), 10));
+
+              cookies.includes(item.id)
+                ? renderCard(item, true)
+                : renderCard(item, false);
             });
           });
         } else {
-          data.category[category].forEach(item => {
-            renderCard(item);
+          data.category[category].forEach((item) => {
+            const cookies_row = favorite.getCookie("favorite");
+            const cookies = cookies_row
+              .split(",")
+              .map((item) => parseInt(item.trim(), 10));
+
+            cookies.includes(item.id)
+              ? renderCard(item, true)
+              : renderCard(item, false);
+          });
+        }
+
+        const favoriteBtns = document.getElementsByClassName("favorite-btn");
+
+        for (const btn of favoriteBtns) {
+          btn.addEventListener("click", function () {
+            const id = this.getAttribute("data-id");
+            if (
+              this.style.backgroundImage ===
+              'url("./assets/icons/favorite_default.svg")'
+            ) {
+              favorite.addIdToCookie(id);
+              this.style.backgroundImage =
+                "url(./assets/icons/favorite_hover.svg)";
+            } else {
+              favorite.removeIdFromCookie(id);
+              this.style.backgroundImage =
+                'url("./assets/icons/favorite_default.svg")';
+            }
           });
         }
       })
-      .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
+      .catch((error) => {
+        console.error("There was a problem with the fetch operation:", error);
       });
   }
 
   // 카드 렌더링 함수
-  function renderCard(item) {
+  function renderCard(item, flag) {
+    // console.log(flag);
     cardContainer.innerHTML += `
     <div class="card_Item" id="item">
     <div class="card_Item">
-    <a class="card-link" href="${item.url}" aria-label="매장 정보 더보기" target="_blank" rel="noopener noreferrer">
-    <img class="card_Item_Img" src="${item.imgUrl}" alt="${item.name} 대표 이미지">
+    <a href="${
+      item.url
+    }" aria-label="매장 정보 더보기" target="_blank" rel="noopener noreferrer">
+    <img class="card_Item_Img" src="${item.imgUrl}" alt="${
+      item.name
+    } 대표 이미지">
     <p class="arrow_box guide-link">클릭시 "네이버지도"로 이동해요!</p>
     </a>
     <div class="card_Item_Content">
     <div class="Item_Title">
-    <p class="shopName">${item.name}</p>
-    <button type="button" title="찜하기 버튼" class="favorite-btn" data-id="${item.id}"></button>
-    <hr class="hr-3"></hr>
+    <p>${item.name}</p>
+    <button type="button" title="찜하기 버튼" class="favorite-btn" data-id="${
+      item.id
+    }" 
+    style="background-image: 
+    ${
+      flag
+        ? "url(./assets/icons/favorite_hover.svg)"
+        : "url(./assets/icons/favorite_default.svg)"
+    }"></button>
+    <br>
     </div>
     <div class="description">
     <p>${item.introduce}</p>
@@ -106,5 +158,5 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // 초기 로드 시 전체보기 데이터 가져오기
-  fetchCategoryData('전체');
+  fetchCategoryData("전체");
 });

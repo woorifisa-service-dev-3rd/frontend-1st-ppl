@@ -1,3 +1,5 @@
+@import url('./style.css'); /* 외부 CSS 파일 가져오기 */
+
 body {
 	font-family: 'Noto Sans KR', sans-serif; /* 폰트를 Noto Sans KR로 설정 */
 }
@@ -64,7 +66,6 @@ body {
   max-width: 100px;
 }
 
-
 .card_Container {  
   width: 90%;
   max-width: 1240px;
@@ -80,16 +81,22 @@ body {
       grid-template-columns: repeat(2, 1fr); /* 화면이 768px 이상일 경우 2열 */
   }
 }
-@media screen and (min-width: 850px) {
-  .card_Container {
-      grid-template-columns: repeat(3, 1fr); /* 화면이 1024px 이상일 경우 4열 */
-  }
-}
 @media screen and (min-width: 1024px) {
   .card_Container {
-      grid-template-columns: repeat(4, 1fr); /* 화면이 1024px 이상일 경우 4열 */
+      grid-template-columns: repeat(3, 1fr); /* 화면이 1024px 이상일 경우 3열 */
   }
 }
+@media screen and (min-width: 1366px) {
+  .card_Container {
+      grid-template-columns: repeat(4, 1fr); /* 화면이 1366px 이상일 경우 4열 */
+  }
+}
+@media screen and (min-width: 1724px) {
+  .card_Container {
+      grid-template-columns: repeat(5, 1fr); /* 화면이 1724px 이상일 경우 5열 */
+  }
+}
+
 
 .card_Item {
   background-color: #DDE1EB; /* 배경 색상 설정 */
@@ -183,8 +190,6 @@ body {
   animation: clickAnimation 0.4s; /* 클릭 애니메이션 적용 */
 }
 
-@import url('./syeonnn.css'); /* 외부 CSS 파일 가져오기 */
-
 .lmr-container .card_Item a:hover .arrow_box {
   display: block; /* 이미지 위에 호버 시 보이게 함 */
 }
@@ -213,25 +218,4 @@ body {
   100% {
     transform: translateY(0); /* 마지막 위치 */
   }
-}
-
-/* 클릭 애니메이션 정의 */
-@keyframes clickAnimation {
-  0% {
-    transform: scale(1); /* 처음 크기 */
-  }
-  25% {
-    transform: scale(0.2); /* 살짝 줄어듦 */
-  }
-  50% {
-    transform: scale(0.8); /* 살짝 커짐 */
-  }
-  75% {
-    transform: scale(1.5); /* 다시 살짝 줄어듦 */
-  }
-  100% {
-    transform: scale(1); /* 원래 크기로 돌아감 */
-  }
-
-
 }
