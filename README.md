@@ -3,7 +3,9 @@
 # 서비스 소개
 저희 박박이 팀은 항상 점심시간에 무엇을 먹을지 고민하는 불편함을 해소하고자 상암 IT타워에 있는 음식점, 카페 등을 추천해주는 웹사이트를 개발하였습니다.
 
-![ppl](https://github.com/woorifisa-service-dev-3rd/frontend-1st-ppl/assets/52206904/de03feae-a387-465f-b946-e1e4d3eb2e45)
+![Jul-18-2024 17-43-27](https://github.com/user-attachments/assets/23915b6c-0115-401b-af85-0a00a93ccd18)
+![Jul-18-2024 17-44-17](https://github.com/user-attachments/assets/987866f2-8353-4f7b-9a35-a6e6ab4614b3)
+
 
 
 # 이용 방법
