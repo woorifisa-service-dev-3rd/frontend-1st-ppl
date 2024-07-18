@@ -207,22 +207,3 @@ body {
     transform: translateY(0); /* 마지막 위치 */
   }
 }
-
-/* 클릭 애니메이션 정의 */
-@keyframes clickAnimation {
-  0% {
-    transform: scale(1); /* 처음 크기 */
-  }
-  25% {
-    transform: scale(0.2); /* 살짝 줄어듦 */
-  }
-  50% {
-    transform: scale(0.8); /* 살짝 커짐 */
-  }
-  75% {
-    transform: scale(1.5); /* 다시 살짝 줄어듦 */
-  }
-  100% {
-    transform: scale(1); /* 원래 크기로 돌아감 */
-  }
-}
