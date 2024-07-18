@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 카테고리 데이터 가져오기 함수
   function fetchCategoryData(category) {
-    fetch("/ETC/category.json")
+    fetch("./ETC/category.json")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok " + response.statusText);
