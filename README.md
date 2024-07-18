@@ -18,7 +18,7 @@
 2. 세미콜론 안쓰면 에러처리 : 팀원마다 세미콜론 적는 방식이 달라 통일하고자 적용하였습니다.
 
 # UI 스타일 가이드라인
-<img width="580" alt="UI" src="https://github.com/woorifisa-service-dev-3rd/frontend-1st-ppl/assets/68735700/67c04e46-2eb7-47fe-899c-d6dd7c041213">
+![style_guide_color](https://github.com/user-attachments/assets/3f6be824-b0d9-4f73-99d0-c21f4c6341df)
 <img width="454" alt="image" src="https://github.com/woorifisa-service-dev-3rd/frontend-1st-ppl/assets/52206904/e1717af0-6c2f-4967-8591-e6e177fc8f62">
 
 # Lighthouse 접근성 개선 과정
