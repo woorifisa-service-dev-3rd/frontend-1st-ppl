@@ -105,6 +105,11 @@ document.addEventListener('DOMContentLoaded', function () {
           });
         } else {
           data.category[category].forEach(item => {
+            // 쿠키에 있는거면
+            //
+
+            // 쿠키에 없는거면
+            //
             renderCard(item);
           });
         }

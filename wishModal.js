@@ -26,7 +26,7 @@ wishModalOpen.addEventListener('click',function(){
             const wishContainer = document.querySelector('.wish-container');
             const WISH_TEMPLATE = () => 
                 `<div class="wish-item">
-                    <img class="wish-item-img" src="./assets/images/${data[id].name}.jpeg">
+                    <img class="wish-item-img" src="${data[id].imgUrl}">
                     <div class="wish-item-name" id>${data[id].name}</div>
                     <button class="wish-delete-btn" id=${id} data-id=${id}>
                         <img src="./assets/icons/delete.svg" alt="삭제">
