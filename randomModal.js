@@ -33,7 +33,9 @@ const randomOfEntire = () => {
 };
 
 const randomOfWish = (array) => {
-    if (array.length === 0) {
+    const filteredArr = array.filter(num => !isNaN(num));
+
+    if (filteredArr.length === 0) {
         window.alert("찜 목록이 비어있어요!");
     }
     else {

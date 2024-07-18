@@ -74,6 +74,22 @@
                 "introduce": "깔끔하고 맛있는 한식을 제공하는 곳",
                 "url": "https://map.naver.com/p/search/음식점/place/1963951230?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp",
                 "imgUrl": "assets/images/미식가베_상암점.jpeg"
+            },
+            {
+                "id": 15,
+                "name": "명동 칼국수",
+                "time": "17:00에 영업 시작",
+                "introduce": "맛있고 가성비 좋은 칼국수와 해물요리를 제공하는 곳",
+                "url": "https://map.naver.com/p/search/음식점/place/1319487141?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp",
+                "imgUrl": "assets/images/명동_칼국수.jpeg"
+            },
+            {
+                "id": 16,
+                "name": "청진생대구탕",
+                "time": "정보 없음",
+                "introduce": "신선한 재료로 만든 생대구탕과 아구찜이 인기인 식당",
+                "url": "https://map.naver.com/p/search/음식점/place/13437555?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp",
+                "imgUrl": "assets/images/청진생대구탕.jpeg"
             }
         ],
         "치킨,닭강정": [
@@ -121,22 +137,6 @@
             }
         ],
         "기타": [
-            {
-                "id": 15,
-                "name": "명동 칼국수",
-                "time": "17:00에 영업 시작",
-                "introduce": "맛있고 가성비 좋은 칼국수와 해물요리를 제공하는 곳",
-                "url": "https://map.naver.com/p/search/음식점/place/1319487141?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp",
-                "imgUrl": "assets/images/명동_칼국수.jpeg"
-            },
-            {
-                "id": 16,
-                "name": "청진생대구탕",
-                "time": "정보 없음",
-                "introduce": "신선한 재료로 만든 생대구탕과 아구찜이 인기인 식당",
-                "url": "https://map.naver.com/p/search/음식점/place/13437555?c=19.50,0,0,0,dh&placePath=%3Fentry%253Dbmp",
-                "imgUrl": "assets/images/청진생대구탕.jpeg"
-            },
             {
                 "id": 17,
                 "name": "소마카츠",
