@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     return;
   }
-
   chips.forEach(function (chip) {
     chip.addEventListener('click', function () {
       const checkbox = chip.querySelector('.chip-input');
@@ -55,9 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     updateChipStyle(checkAllChip, allChecked); // 전체보기 버튼 스타일 업데이트
   }
-
-
-
+  
   // 카테고리 데이터 가져오기 함수
   function fetchCategoryData(category) {
     fetch("/ETC/category.json")
@@ -71,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const cate = category;
         cardContainer.innerHTML = ""; // 기존 카드 제거
         if (cate === "전체") {
-          Object.entries(data.category).forEach(([_,items]) => {
+          Object.entries(data.category).forEach(([categoryName, items]) => {
             items.forEach((item) => {
               const cookies_row = favorite.getCookie("favorite");
               const cookies = cookies_row
@@ -122,13 +119,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 카드 렌더링 함수
   function renderCard(item, flag) {
+    // console.log(flag);
     cardContainer.innerHTML += `
     <div class="card_Item" id="item">
     <div class="card_Item">
-    <a href="${item.url
-      }" aria-label="매장 정보 더보기" target="_blank" rel="noopener noreferrer">
-    <img class="card_Item_Img" src="${item.imgUrl}" alt="${item.name
-      } 대표 이미지">
+    <a href="${
+      item.url
+    }" aria-label="매장 정보 더보기" target="_blank" rel="noopener noreferrer">
+    <img class="card_Item_Img" src="${item.imgUrl}" alt="${
+      item.name
+    } 대표 이미지">
     <p class="arrow_box guide-link">클릭시 "네이버지도"로 이동해요!</p>
     </a>
     <div class="card_Item_Content">
@@ -141,13 +141,15 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
     </div>
     <div class="favorite-container">
-    <button type="button" title="찜하기 버튼" class="favorite-btn" data-id="${item.id
-      }" 
+    <button type="button" title="찜하기 버튼" class="favorite-btn" data-id="${
+      item.id
+    }" 
     style="background-image: 
-    ${flag
+    ${
+      flag
         ? "url(./assets/icons/favorite_hover.svg)"
         : "url(./assets/icons/favorite_default.svg)"
-      }"></button>
+    }"></button>
     </div>
     </div>
     </div>`;
