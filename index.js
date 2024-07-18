@@ -20,12 +20,11 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleCheckbox(checkbox);
       updateChipStyle(chip, checkbox.checked);
       updateCheckAllStatus();
-      console.log(chip.dataset.category);
       fetchCategoryData(chip.dataset.category);
     });
 
     // label 클릭 시 checkbox 상태를 토글하고, 선택된 스타일을 적용
-    label.addEventListener("click", function (event) {
+    label.addEventListener("click", function () {
       toggleCheckbox(checkbox);
       updateChipStyle(chip, checkbox.checked);
       updateCheckAllStatus();
@@ -101,8 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const cate = category;
         cardContainer.innerHTML = ""; // 기존 카드 제거
         if (cate === "전체") {
-          Object.entries(data.category).forEach(([categoryName, items]) => {
-            // console.log(categoryName);
+          Object.entries(data.category).forEach(([items]) => {
             items.forEach((item) => {
               const cookies_row = favorite.getCookie("favorite");
               const cookies = cookies_row
@@ -154,7 +152,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 카드 렌더링 함수
   function renderCard(item, flag) {
-    // console.log(flag);
     cardContainer.innerHTML += `
     <div class="card_Item" id="item">
     <div class="card_Item">
@@ -167,8 +164,12 @@ document.addEventListener("DOMContentLoaded", function () {
     <p class="arrow_box guide-link">클릭시 "네이버지도"로 이동해요!</p>
     </a>
     <div class="card_Item_Content">
+    <a href="${
+      item.url
+    }" aria-label="매장 정보 더보기" target="_blank" rel="noopener noreferrer">
     <div class="Item_Title">
     <p>${item.name}</p>
+    </a>
     <button type="button" title="찜하기 버튼" class="favorite-btn" data-id="${
       item.id
     }" 
