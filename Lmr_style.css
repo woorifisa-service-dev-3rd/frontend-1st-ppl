@@ -99,10 +99,10 @@ body {
   overflow: hidden; /* 이미지가 카드 아이템을 벗어나지 않도록 설정 */
   transition: transform 0.3s ease; /* 카드 호버 시 확대 애니메이션 */
 }
-.card_Item a {
+/* .card_Item a {
   width: 99%;
   height: 99%;
-}
+} */
 
 .card_Item:hover {
   transform: scale(1.05); /* 카드 호버 시 확대 */
@@ -110,16 +110,11 @@ body {
 
 .card_Item_Img {
   background-color: #D9D9D9; /* 배경 색상 설정 */
-
-  justify-content: center; /* 수평 가운데 정렬 */
-  width: 68.75rem; /* 이미지 너비 설정 */
-  height: 15.625rem; /* 이미지 높이 설정 */
+  /* justify-content: center; 수평 가운데 정렬 */
+  width: 100%; /* 이미지 너비 설정 */
   flex-shrink: 0; /* 플렉스 아이템이 축소되지 않도록 설정 */
 
   box-sizing: border-box; /* 박스 크기 계산에 패딩과 보더 포함 */
-  margin-top: 2.06rem; /* 상단 마진 설정 */
-  margin-left: 1.75rem; /* 좌측 마진 설정 */
-  margin-right: 1.75rem; /* 우측 마진 설정 */
 }
 
 .card_Item_Content {
