@@ -22,13 +22,9 @@ export function getCookie(name) {
   return "";
 }
 
-// 쿠키 삭제 함수
-// function deleteCookie(name) {
-//     document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-// }
-
 // ID 값을 쿠키에 추가하는 함수
 export function addIdToCookie(id) {
+  console.log("add cookie func");
   const cookieName = "favorite";
   let favorite = getCookie(cookieName);
   favorite = favorite ? favorite.split(",") : [];
@@ -51,3 +47,17 @@ export function removeIdFromCookie(id) {
     setCookie(cookieName, favorite.join(","), 7);
   }
 }
+
+// document.querySelectorAll(".delete-btn").forEach((button) => {
+//   button.addEventListener("click", function () {
+//     const id = this.getAttribute("data-id");
+//     removeIdFromCookie(id);
+//     location.reload();
+//   });
+// });
+
+// document
+//   .getElementById("cookie-list-btn")
+//   .addEventListener("click", function () {
+//     console.log(getCookie("favorite"));
+//   });
