@@ -9,8 +9,6 @@ html, body {
 	background-color: #F1F9FF;
 }
 
-@import "./reset.css";
-
 /* header */
 .header {
     display: flex;
