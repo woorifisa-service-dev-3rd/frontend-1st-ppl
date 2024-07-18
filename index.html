@@ -17,6 +17,7 @@
     <script defer src="wishModal.js" type="module"></script>
     <script defer src="randomModal.js" type="module"></script>
     <script defer src="index.js" type="module"></script>
+    <!-- <script defer src="./test.js" type="module"></script> -->
 
 </head>
 
@@ -87,34 +88,38 @@
         </div>
     </div>
 
-<!-- 홈 화면 -->
-<section style="padding: 2.8rem 6.25rem">
-    <div class="service-info">상암 IT 타워에 입점해 있는 모든 식당과 카페를 보여드릴게요~!</div>
-    <div class="service-info">
-        <div id="chip_Container">
-            <div class="chip selected" data-category="전체" id="check-All">
-                <input type="checkbox" class="chip-input" id="전체" value="전체" checked>
-                <label for="전체" class="chip-label">전체보기</label>
-            </div>
-            <div class="chip" data-category="한식">
-                <input type="checkbox" class="chip-input" id="한식" value="한식">
-                <label for="한식" class="chip-label">한식</label>
-            </div>
-            <div class="chip" data-category="치킨,닭강정">
-                <input type="checkbox" class="chip-input" id="치킨-닭강정" value="치킨,닭강정">
-                <label for="치킨-닭강정" class="chip-label">치킨,닭강정</label>
-            </div>
-            <div class="chip" data-category="분식">
-                <input type="checkbox" class="chip-input" id="분식" value="분식">
-                <label for="분식" class="chip-label">분식</label>
-            </div>
-            <div class="chip" data-category="기타">
-                <input type="checkbox" class="chip-input" id="기타" value="기타">
-                <label for="기타" class="chip-label">기타</label>
+    <!-- 홈 화면 -->
+    <section style="padding: 2.8rem 6.25rem">
+        <div class="service-info">상암 IT 타워에 입점해 있는 모든 식당과 카페를 보여드릴게요~!</div>
+        <div class="service-info">
+            <div id="chip_Container">
+                <div class="chip selected" data-category="전체" id="check-All">
+                    <input type="checkbox" class="chip-input" id="전체" value="전체" checked>
+                    <label for="전체" class="chip-label" id="check-All-label">전체보기</label>
+                </div>
+                <div class="chip" data-category="카페">
+                    <input type="checkbox" class="chip-input" id="카페" value="카페">
+                    <label for="카페" class="chip-label">카페</label>
+                </div>
+                <div class="chip" data-category="한식">
+                    <input type="checkbox" class="chip-input" id="한식" value="한식">
+                    <label for="한식" class="chip-label">한식</label>
+                </div>
+                <div class="chip" data-category="치킨,닭강정">
+                    <input type="checkbox" class="chip-input" id="치킨-닭강정" value="치킨,닭강정">
+                    <label for="치킨-닭강정" class="chip-label">치킨,닭강정</label>
+                </div>
+                <div class="chip" data-category="분식">
+                    <input type="checkbox" class="chip-input" id="분식" value="분식">
+                    <label for="분식" class="chip-label">분식</label>
+                </div>
+                <div class="chip" data-category="기타">
+                    <input type="checkbox" class="chip-input" id="기타" value="기타">
+                    <label for="기타" class="chip-label">기타</label>
+                </div>
             </div>
         </div>
-    </div>
-    <div>
+        <div>
 
         <div class="lmr-container">
             <div class="card_Container" id="card_Container">
