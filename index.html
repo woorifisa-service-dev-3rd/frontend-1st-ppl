@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
     <script defer src="wishModal.js" type="module"></script>
-    <script defer src="randomModal.js"></script>
+    <script defer src="randomModal.js" type="module"></script>
     <script defer src="test.js" type="module"></script>
 
 </head>
@@ -40,12 +40,11 @@
         <div class="modal-container">
             <div class="wishModal-header">
                 <h1 class="favorite-title">찜 목록</h1>
-                <h2 class="favorite-cnt">총 1개</h2>
+                <h2 class="favorite-cnt" id="favorite-cnt">총 0개</h2>
             </div>
             <hr />
             <section style="padding: 1.25rem">
-                <div class="wish-container">
-                                  
+                <div class="wish-container">        
                 </div>
                 <button class="wish-close-btn" id="wish-close-btn">닫기</button>
             </section>

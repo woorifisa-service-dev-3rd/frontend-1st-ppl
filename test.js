@@ -1,4 +1,4 @@
-import * as favorite from "./favorite.js";
+import * as favorite from "./cookie.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   const chips = document.querySelectorAll(".chip");

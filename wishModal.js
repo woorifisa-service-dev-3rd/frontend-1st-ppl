@@ -1,11 +1,15 @@
-import { getCookie, removeIdFromCookie } from './favorite.js';
+import * as cookie from './cookie.js';
 
+const wishCount = document.getElementById('favorite-cnt');
 const wishModal = document.getElementById('wish-modal');
 const wishModalOpen = document.getElementById('wish-open-btn');
 const wishModalClose = document.getElementById('wish-close-btn');
 
 //열기 버튼을 눌렀을 때 모달팝업 열림
 wishModalOpen.addEventListener('click',function(){
+    const wishContainer = document.querySelector('.wish-container');
+    wishContainer.innerHTML = '';
+
     wishModal.style.display = 'block';
 
     fetch('/ETC/id.json')
@@ -16,14 +20,16 @@ wishModalOpen.addEventListener('click',function(){
         return response.json();
     })
     .then(data => {
-        // const dataString = getCookie('favorite');
-        // const dataArray = dataString.split(',').map(item => parseInt(item.trim(), 10));
-        const dataArray = ['1', '2'];
+        let dataString = cookie.getCookie('favorite');
+        let dataArray = dataString.split(',').map(item => parseInt(item.trim(), 10));
+
+        if (!dataString) {
+            wishCount.textContent = '총 0개';
+        }
+        else {wishCount.textContent = `총 ${dataArray.length}개`;}
 
         dataArray.map(id => {
-            console.log(data[id]);
 
-            const wishContainer = document.querySelector('.wish-container');
             const WISH_TEMPLATE = () => 
                 `<div class="wish-item">
                     <img class="wish-item-img" src="${data[id].imgUrl}">
@@ -33,19 +39,23 @@ wishModalOpen.addEventListener('click',function(){
                     </button>
                 </div>`;
             wishContainer.insertAdjacentHTML("afterbegin", WISH_TEMPLATE(id));
-            console.log('1');
         });
         
         const wishItemDeleteBtns = document.getElementsByClassName('wish-delete-btn');
         for (const btn of wishItemDeleteBtns) {
             btn.addEventListener('click', function(event) {
-                console.log('Delete button clicked', event.target.dataset.id);
                 event.target.closest('.wish-item').remove();
 
+    
                 const id = this.getAttribute("data-id");
-                removeIdFromCookie(id);
-                // location.reload();
-                console.log('delete');
+                cookie.removeIdFromCookie(id);
+
+                dataString = cookie.getCookie('favorite');
+                dataArray = dataString.split(',').map(item => parseInt(item.trim(), 10));
+                if (!dataString) {
+                    wishCount.textContent = '총 0개';
+                }
+                else {wishCount.textContent = `총 ${dataArray.length}개`;}
             });
         }
     })
@@ -56,8 +66,8 @@ wishModalOpen.addEventListener('click',function(){
 });
 
 
-
 //닫기 버튼을 눌렀을 때 모달팝업 닫힘
 wishModalClose.addEventListener('click',function(){
     wishModal.style.display = 'none';
+    location.reload();
 });

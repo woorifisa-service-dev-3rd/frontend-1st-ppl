@@ -1,4 +1,4 @@
-import { getCookie } from './favorite.js';
+import * as cookie from './cookie.js';
 
 const randomModal = document.getElementById('random-modal');
 const randomModalOpen = document.getElementById('random-open-btn');
@@ -21,6 +21,7 @@ randomModalOpen.addEventListener('click',function(){
 randomModalClose.addEventListener('click',function(){
     randomModal.style.display = 'none';
     dice.style.display = 'block';
+    location.reload();
 });
 
 //  전체 아이템 크기
@@ -49,14 +50,12 @@ diceInput.forEach(function(input) {
         console.log(diceInputRange);
         
         // 쿠키로 찜 목록 아이템 id 정보 받기
-        // const dataString = getCookie('favorite');
-        // const dataArray = dataString.split(',').map(item => parseInt(item.trim(), 10));
+        const dataString = cookie.getCookie('favorite');
+        const dataArray = dataString.split(',').map(item => parseInt(item.trim(), 10));
         
-        const array = ["1","2","3"];
-        randomResultID = (diceInputRange === 'entire-list'? randomOfEntire() : randomOfWish(array) );
+        randomResultID = (diceInputRange === 'entire-list'? randomOfEntire() : randomOfWish(dataArray) );
     });
 });
-console.log("diceInputRange", diceInputRange);
 
 
 dice.addEventListener('click', function() {
