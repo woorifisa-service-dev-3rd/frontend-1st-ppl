@@ -1,6 +1,7 @@
 {
   "name": "frontend-ppl",
   "version": "1.0.0",
+  "homepage": "/frontend-1st-ppl",
   "type": "module",
   "description": "random lunch suggestion",
   "main": "app.js",
