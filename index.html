@@ -14,8 +14,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
-    <script defer src="wishModal.js"></script>
-    <script defer src="randomModal.js"></script>
+    <script defer src="wishModal.js" type="module"></script>
+    <script defer src="randomModal.js" type="module"></script>
     <script defer src="test.js" type="module"></script>
 
 </head>
@@ -40,26 +40,11 @@
         <div class="modal-container">
             <div class="wishModal-header">
                 <h1 class="favorite-title">찜 목록</h1>
-                <h2 class="favorite-cnt">총 1개</h2>
+                <h2 class="favorite-cnt" id="favorite-cnt">총 0개</h2>
             </div>
             <hr />
             <section style="padding: 1.25rem">
-                <div class="wish-container">
-                    <div class="wish-item">
-                        <img class="wish-item-img" src="./assets/images/가마로강정_상암점.jpeg">
-                        <div class="wish-item-name">가마로강정 상암점</div>
-                        <button class="delete-btn">
-                            <img src="./assets/icons/delete.svg" alt="삭제">
-                        </button>
-                    </div>
-                    <div class="wish-item">
-                        <img class="wish-item-img" src="./assets/images/김치도가_상암점.jpeg">
-                        <div class="wish-item-name">김치도가 상암점</div>
-                        <button class="delete-btn">
-                            <img src="./assets/icons/delete.svg" alt="삭제">
-                        </button>
-                    </div>
-
+                <div class="wish-container">        
                 </div>
                 <button class="wish-close-btn" id="wish-close-btn">닫기</button>
             </section>
@@ -69,81 +54,76 @@
     <!-- 랜덤 주사위 모달 팝업 -->
     <div class="modal" id="random-modal">
         <div class="modal-container dice-modal-container">
-            <div class="randomModal-header">
-                <h1 class="favorite-title">굴려 굴려 주사위 ~</h1>
-                <button class="delete-btn" id="random-close-btn">
-                    <img src="./assets/icons/delete.svg" alt="닫기">
-                </button>
-            </div>
-            <hr />
-            <section style="padding: 1.25rem">
-                <div class="dice-container">
-                    <p id="dice-text">원하는 메뉴를 선택 후 주사위를 눌러보세요! 😜</p>
-                    <label class="custom-radio" for="entire-list">
-                        <input type="radio" id="entire-list" name="dice-radio" class="radio" value="entire-list">
-                        <span class="checkmark"></span>
-                        전체 메뉴 중에서 랜덤 뽑기
-                    </label>
-                    <label class="custom-radio" for="wish-list">
-                        <input type="radio" id="wish-list" name="dice-radio" class="radio" value="wish-list">
-                        <span class="checkmark"></span>
-                        내 찜 목록 중에서 랜덤 뽑기
-                    </label>
+                <div class="randomModal-header">
+                    <h1 class="favorite-title">굴려 굴려 주사위 ~</h1>
+                    <button class="random-delete-btn" id="random-close-btn">
+                        <img src="./assets/icons/delete.svg" alt="닫기">
+                    </button>
                 </div>
-
-                <div class="dice" id="dice"></div>
-                <!-- 카드 소환 -->
-                <div class="dice-result-container" id="dice-result">
-                    <div class="dice-result-box">
-                        <img class="dice-result-img" src="./assets/images/베브릿지_상암IT점.jpeg" alt="베브릿지_상암IT점 대표 이미지">
-                        <div class="dice-result-info">
-                            <h3 style="font-weight: bold; padding-bottom: 10px;">베브릿지 상암IT점</h3>
-                            <p style="padding-bottom: 10px;">가성비 좋은 커피와 다양한 음료를 제공하는 카페</p>
-                            <p>영업 시간 : 20:00에 영업 종료</p>
+                <hr/>
+                <section style="padding: 1.25rem">
+                    <div class="dice-container">
+                        <p id="dice-text">원하는 메뉴를 선택 후 주사위를 눌러보세요! 😜</p>
+                        <label class="custom-radio" for="entire-list">
+                            <input type="radio" id="entire-list" name="dice-radio" class="radio" value="entire-list" >
+                            <span class="checkmark"></span>
+                            전체 메뉴 중에서 랜덤 뽑기
+                        </label>
+                        <label class="custom-radio" for="wish-list">
+                            <input type="radio" id="wish-list" name="dice-radio" class="radio" value="wish-list" >
+                            <span class="checkmark"></span>
+                            내 찜 목록 중에서 랜덤 뽑기
+                        </label>
+                    </div>
+        
+                    <div class="dice" id="dice"></div>
+                    <!-- 카드 소환 -->
+                    <div class="dice-result-container" id="dice-result">
+                        <div class="dice-result-box">
+                            
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
         </div>
     </div>
 
-    <!-- 홈 화면 -->
-    <section style="padding: 2.8rem 6.25rem">
-        <div class="service-info">상암 IT 타워에 입점해 있는 모든 식당과 카페를 보여드릴게요~!</div>
-        <div class="service-info">
-            <div id="chip_Container">
-                <div class="chip selected" data-category="전체" id="check-All">
-                    <input type="checkbox" class="chip-input" id="전체" value="전체" checked>
-                    <label for="전체" class="chip-label">전체보기</label>
-                </div>
-                <div class="chip" data-category="한식">
-                    <input type="checkbox" class="chip-input" id="한식" value="한식">
-                    <label for="한식" class="chip-label">한식</label>
-                </div>
-                <div class="chip" data-category="치킨,닭강정">
-                    <input type="checkbox" class="chip-input" id="치킨-닭강정" value="치킨,닭강정">
-                    <label for="치킨-닭강정" class="chip-label">치킨,닭강정</label>
-                </div>
-                <div class="chip" data-category="분식">
-                    <input type="checkbox" class="chip-input" id="분식" value="분식">
-                    <label for="분식" class="chip-label">분식</label>
-                </div>
-                <div class="chip" data-category="기타">
-                    <input type="checkbox" class="chip-input" id="기타" value="기타">
-                    <label for="기타" class="chip-label">기타</label>
-                </div>
+<!-- 홈 화면 -->
+<section style="padding: 2.8rem 6.25rem">
+    <div class="service-info">상암 IT 타워에 입점해 있는 모든 식당과 카페를 보여드릴게요~!</div>
+    <div class="service-info">
+        <div id="chip_Container">
+            <div class="chip selected" data-category="전체" id="check-All">
+                <input type="checkbox" class="chip-input" id="전체" value="전체" checked>
+                <label for="전체" class="chip-label">전체보기</label>
+            </div>
+            <div class="chip" data-category="한식">
+                <input type="checkbox" class="chip-input" id="한식" value="한식">
+                <label for="한식" class="chip-label">한식</label>
+            </div>
+            <div class="chip" data-category="치킨,닭강정">
+                <input type="checkbox" class="chip-input" id="치킨-닭강정" value="치킨,닭강정">
+                <label for="치킨-닭강정" class="chip-label">치킨,닭강정</label>
+            </div>
+            <div class="chip" data-category="분식">
+                <input type="checkbox" class="chip-input" id="분식" value="분식">
+                <label for="분식" class="chip-label">분식</label>
+            </div>
+            <div class="chip" data-category="기타">
+                <input type="checkbox" class="chip-input" id="기타" value="기타">
+                <label for="기타" class="chip-label">기타</label>
             </div>
         </div>
-        <div>
+    </div>
+    <div>
 
-            <div class="lmr-container">
-                <div class="card_Container" id="card_Container">
-                </div>
+        <div class="lmr-container">
+            <div class="card_Container" id="card_Container">
             </div>
         </div>
-        </div>
-        </div>
-    </section>
+    </div>
+    </div>
+    </div>
+</section>
 
 </body>
 
