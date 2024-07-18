@@ -170,7 +170,8 @@ hr {
     font-weight: bold;
 }
 .wish-container{
-    max-height: 400px;
+    max-height: 25rem;
+    width: 22.5rem;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -183,17 +184,27 @@ hr {
     align-items: center;
     margin-bottom: 1.125rem;
     height: auto;
+    width: 100%;
 }
 .wish-item-img{
     width: 6.25rem;
     height: 6.25rem;
 }
 .wish-item-name{
+    width: 12.5rem;
     font-size: 1.125rem;
     align-self: flex-start;
     padding-left: 0.625rem;
+    word-break: normal;
+    overflow-wrap: break-word;
 }
-.delete-btn{
+.wish-delete-btn{
+    border: 0;
+    background-color: transparent;
+    margin-left: auto; 
+    align-self: flex-start;
+}
+.random-delete-btn{
     border: 0;
     background-color: transparent;
     margin-left: auto; 
@@ -307,7 +318,8 @@ hr {
 
 .dice-result-container {
 	display: none;
-	padding-top: 3.125rem;
+	padding-top: 30px;
+    padding-bottom: 30px;
 }
 .dice-result-box {
 	display: flex;
@@ -317,6 +329,7 @@ hr {
 }
 .dice-result-img {
 	width: 50%;
+    height: 260px;
 }
 .dice-result-info {
 	width: 50%;

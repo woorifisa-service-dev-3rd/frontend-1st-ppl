@@ -1,9 +1,9 @@
 {
   "name": "frontend-ppl",
   "version": "1.0.0",
+  "type": "module",
   "description": "random lunch suggestion",
   "main": "app.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,4 +13,5 @@
     "eslint": "^9.7.0",
     "globals": "^15.8.0"
   }
+
 }
