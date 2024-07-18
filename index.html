@@ -14,7 +14,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
-    <script defer src="wishModal.js"></script>
+    <script defer src="wishModal.js" type="module"></script>
     <script defer src="randomModal.js"></script>
 </head>
 <body>
@@ -42,21 +42,7 @@
             <hr/>
             <section style="padding: 1.25rem">
                 <div class="wish-container">
-                    <div class="wish-item">
-                        <img class="wish-item-img" src="./assets/images/가마로강정_상암점.jpeg">
-                        <div class="wish-item-name">가마로강정 상암점</div>
-                        <button class="delete-btn">
-                            <img src="./assets/icons/delete.svg" alt="삭제">
-                        </button>
-                    </div>
-                    <div class="wish-item">
-                        <img class="wish-item-img" src="./assets/images/김치도가_상암점.jpeg">
-                        <div class="wish-item-name">김치도가 상암점</div>
-                        <button class="delete-btn">
-                            <img src="./assets/icons/delete.svg" alt="삭제">
-                        </button>
-                    </div>
-                    
+                                  
                 </div>
                 <button class="wish-close-btn" id="wish-close-btn">닫기</button>
             </section>
@@ -68,7 +54,7 @@
         <div class="modal-container dice-modal-container">
                 <div class="randomModal-header">
                     <h1 class="favorite-title">굴려 굴려 주사위 ~</h1>
-                    <button class="delete-btn" id="random-close-btn">
+                    <button class="random-delete-btn" id="random-close-btn">
                         <img src="./assets/icons/delete.svg" alt="닫기">
                     </button>
                 </div>
@@ -92,12 +78,7 @@
                     <!-- 카드 소환 -->
                     <div class="dice-result-container" id="dice-result">
                         <div class="dice-result-box">
-                            <img class="dice-result-img" src="./assets/images/베브릿지_상암IT점.jpeg" alt="베브릿지_상암IT점 대표 이미지">
-                            <div class="dice-result-info">
-                                <h3 style="font-weight: bold; padding-bottom: 10px;">베브릿지 상암IT점</h3>
-                                <p style="padding-bottom: 10px;">가성비 좋은 커피와 다양한 음료를 제공하는 카페</p>
-                                <p>영업 시간 : 20:00에 영업 종료</p>
-                            </div>
+                            
                         </div>
                     </div>
                 </section>

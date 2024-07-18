@@ -1,5 +1,5 @@
 // 쿠키 설정 함수
-function setCookie(name, value, days) {
+export function setCookie(name, value, days) {
   const date = new Date();
   date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
   const expires = "expires=" + date.toUTCString();
@@ -7,7 +7,7 @@ function setCookie(name, value, days) {
 }
 
 // 쿠키 읽기 함수
-function getCookie(name) {
+export function getCookie(name) {
   const nameEQ = name + "=";
   const ca = document.cookie.split(";");
   for (let i = 0; i < ca.length; i++) {
@@ -28,7 +28,7 @@ function getCookie(name) {
 // }
 
 // ID 값을 쿠키에 추가하는 함수
-function addIdToCookie(id) {
+export function addIdToCookie(id) {
   const cookieName = "favorite";
   let favorite = getCookie(cookieName);
   favorite = favorite ? favorite.split(",") : [];
@@ -40,7 +40,7 @@ function addIdToCookie(id) {
 }
 
 // ID 값을 쿠키에서 삭제하는 함수
-function removeIdFromCookie(id) {
+export function removeIdFromCookie(id) {
   const cookieName = "favorite";
   let favorite = getCookie(cookieName);
   favorite = favorite ? favorite.split(",") : [];
@@ -51,25 +51,3 @@ function removeIdFromCookie(id) {
     setCookie(cookieName, favorite.join(","), 7);
   }
 }
-
-document.querySelectorAll(".favorite-btn").forEach((button) => {
-  button.addEventListener("click", function () {
-    const id = this.getAttribute("data-id");
-    addIdToCookie(id);
-    location.reload();
-  });
-});
-
-document.querySelectorAll(".delete-btn").forEach((button) => {
-  button.addEventListener("click", function () {
-    const id = this.getAttribute("data-id");
-    removeIdFromCookie(id);
-    location.reload();
-  });
-});
-
-document
-  .getElementById("cookie-list-btn")
-  .addEventListener("click", function () {
-    console.log(getCookie("favorite"));
-  });

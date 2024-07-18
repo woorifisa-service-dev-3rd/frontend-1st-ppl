@@ -172,7 +172,8 @@ hr {
     font-weight: bold;
 }
 .wish-container{
-    max-height: 400px;
+    max-height: 25rem;
+    max-width: 22.5rem;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -185,17 +186,27 @@ hr {
     align-items: center;
     margin-bottom: 1.125rem;
     height: auto;
+    width: 100%;
 }
 .wish-item-img{
     width: 6.25rem;
     height: 6.25rem;
 }
 .wish-item-name{
+    width: 12.5rem;
     font-size: 1.125rem;
     align-self: flex-start;
     padding-left: 0.625rem;
+    word-break: normal;
+    overflow-wrap: break-word;
 }
-.delete-btn{
+.wish-delete-btn{
+    border: 0;
+    background-color: transparent;
+    margin-left: auto; 
+    align-self: flex-start;
+}
+.random-delete-btn{
     border: 0;
     background-color: transparent;
     margin-left: auto; 
