@@ -164,8 +164,12 @@ document.addEventListener("DOMContentLoaded", function () {
     <p class="arrow_box guide-link">클릭시 "네이버지도"로 이동해요!</p>
     </a>
     <div class="card_Item_Content">
+    <a href="${
+      item.url
+    }" aria-label="매장 정보 더보기" target="_blank" rel="noopener noreferrer">
     <div class="Item_Title">
     <p>${item.name}</p>
+    </a>
     <button type="button" title="찜하기 버튼" class="favorite-btn" data-id="${
       item.id
     }" 
