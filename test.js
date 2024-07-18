@@ -136,7 +136,14 @@ document.addEventListener("DOMContentLoaded", function () {
     </a>
     <div class="card_Item_Content">
     <div class="Item_Title">
-    <p>${item.name}</p>
+    <p>${item.name}</p> 
+    </div>
+    <div class="description">
+    <p>${item.introduce}</p>
+    <p>${item.time}</p>
+    </div>
+    </div>
+    <div class="favorite-container">
     <button type="button" title="찜하기 버튼" class="favorite-btn" data-id="${
       item.id
     }" 
@@ -146,12 +153,6 @@ document.addEventListener("DOMContentLoaded", function () {
         ? "url(./assets/icons/favorite_hover.svg)"
         : "url(./assets/icons/favorite_default.svg)"
     }"></button>
-    <br>
-    </div>
-    <div class="description">
-    <p>${item.introduce}</p>
-    <p>${item.time}</p>
-    </div>
     </div>
     </div>
     </div>`;
