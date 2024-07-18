@@ -13,6 +13,10 @@
 3. 모달로 찜 목록 보기 및 목록 삭제 기능 (JS 추가 시 구현)
 4. 찜 목록을 기반으로 랜덤으로 하나 골라서 추천해주기 (JS 추가 시 구현)
 
+# ESLint 룰 적용
+1. 사용되지 않는 변수 경고처리 : 쓸데없는 변수 선언을 방지하고자 적용하였습니다.
+2. 세미콜론 안쓰면 에러처리 : 팀원마다 세미콜론 적는 방식이 달라 통일하고자 적용하였습니다.
+
 # UI 스타일 가이드라인
 <img width="580" alt="UI" src="https://github.com/woorifisa-service-dev-3rd/frontend-1st-ppl/assets/68735700/67c04e46-2eb7-47fe-899c-d6dd7c041213">
 <img width="454" alt="image" src="https://github.com/woorifisa-service-dev-3rd/frontend-1st-ppl/assets/52206904/e1717af0-6c2f-4967-8591-e6e177fc8f62">
