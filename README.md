@@ -1,5 +1,7 @@
 ![image](https://github.com/woorifisa-service-dev-3rd/frontend-1st-ppl/assets/52206904/59471e07-e4e9-4952-b9b2-9ef6f7a40d92)
 
+<a href="https://woorifisa-service-dev-3rd.github.io/frontend-1st-ppl/">Live Demo</a>
+
 # 서비스 소개
 저희 박박이 팀은 항상 점심시간에 무엇을 먹을지 고민하는 불편함을 해소하고자 상암 IT타워에 있는 음식점, 카페 등을 추천해주는 웹사이트를 개발하였습니다.
 
